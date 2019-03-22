@@ -1,0 +1,11 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
+  <div class="text-center">
+    <h1>キャッチコピー</h1>
+  </div>
+  <div class="row">
+    <%= link_to '新規登録', signup_path, class: "btn btn-default col-sm-4 col-sm-offset-1" %>
+    <%= link_to 'ログイン', login_path, class: "btn btn-default col-sm-4 col-sm-offset-1" %>
+  </div>
+<% end %>
